@@ -21,3 +21,11 @@ then
 else
     echo "You are Root user"
 fi  
+
+yum install mysql -y &>> $LOGFILE
+
+VALIDATE $? "Installing MySQL"
+
+yum install git -y &>> $LOGFILE
+
+VALIDATE $? "Installing GIT"
